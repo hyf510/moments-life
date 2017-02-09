@@ -7,7 +7,7 @@ let createStoreWithMiddleware;
 
 if (process.env.NODE_ENV === 'production') {
   createStoreWithMiddleware = compose(
-    applyMiddleware(thunk, asyncMiddleware),
+    applyMiddleware(thunk, asyncMiddleware)
   )(createStore);
 } else {
   createStoreWithMiddleware = compose(
