@@ -4,9 +4,11 @@ var autoprefixer = require('autoprefixer');
 
 var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin');
 
+//处理entry配置项的根目录（绝对路径）
 var projectRootPath = path.resolve(__dirname, '../');
 var assetsPath = path.resolve(projectRootPath, './static/dist');
 
+//加载域名端口配置文件（开发环境域名为localhost；端口号为3000）
 var config = require('../src/config');
 
 module.exports = {
